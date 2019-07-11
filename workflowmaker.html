@@ -52,6 +52,9 @@
 		}
 		else
 		{
+            window.onbeforeunload = function() {
+              return "Are you sure you want to navigate away?";
+            }
 			// Creates the graph inside the given container
 			var graph = new mxGraph(container);
 			graph.panningHandler.useLeftButtonForPanning = true;
